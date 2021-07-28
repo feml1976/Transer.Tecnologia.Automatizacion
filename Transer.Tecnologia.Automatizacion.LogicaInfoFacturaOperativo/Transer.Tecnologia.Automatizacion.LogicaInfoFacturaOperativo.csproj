@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{813709A7-24B2-442E-B6C4-0CB202B9A191}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Transer.Tecnologia.Automatizacion.LogicaInfoFacturaOperativo</RootNamespace>
+    <AssemblyName>Transer.Tecnologia.Automatizacion.LogicaInfoFacturaOperativo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\LogicaInfoFactura.cs" />
+    <Compile Include="ILogicaInfoFactura.cs" />
+    <Compile Include="LogicaInfoFactura.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Transer.Tecnologia.Automatizacion.EncodingFE\Transer.Tecnologia.Automatizacion.EncodingFE.csproj">
+      <Project>{F5D06C57-E687-41ED-9633-0460DF432162}</Project>
+      <Name>Transer.Tecnologia.Automatizacion.EncodingFE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transer.Tecnologia.Automatizacion.Entity\Transer.Tecnologia.Automatizacion.Entity.csproj">
+      <Project>{7C11CEC4-75C3-4B17-8056-905A1F057D58}</Project>
+      <Name>Transer.Tecnologia.Automatizacion.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transer.Tecnologia.Automatizacion.HttpsSendXmlDocument\Transer.Tecnologia.Automatizacion.HttpsSendXmlDocument.csproj">
+      <Project>{0E40968A-C354-4715-9543-17E4B56742D5}</Project>
+      <Name>Transer.Tecnologia.Automatizacion.HttpsSendXmlDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transer.Tecnologia.Automatizacion.Infrastructure\Transer.Tecnologia.Automatizacion.Infrastructure.csproj">
+      <Project>{C3E92752-02F3-4973-9451-5CFBFF0C1654}</Project>
+      <Name>Transer.Tecnologia.Automatizacion.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
